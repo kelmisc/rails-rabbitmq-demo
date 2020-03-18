@@ -1,0 +1,1009 @@
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20200316142933)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20200316142933)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20200316142933)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20200316142933)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" varchar, "balance" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200316142933"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-16 14:40:54.686907"], ["updated_at", "2020-03-16 14:40:54.686907"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.3ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "01"], ["balance", 861216], ["created_at", "2020-03-16 14:41:04.394105"], ["updated_at", "2020-03-16 14:41:04.394105"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "02"], ["balance", 412722], ["created_at", "2020-03-16 14:41:04.397269"], ["updated_at", "2020-03-16 14:41:04.397269"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "03"], ["balance", 82803], ["created_at", "2020-03-16 14:41:04.399864"], ["updated_at", "2020-03-16 14:41:04.399864"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Destroy (0.3ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Destroy (0.2ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Destroy (0.2ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "01"], ["balance", 596955], ["created_at", "2020-03-16 14:44:20.219094"], ["updated_at", "2020-03-16 14:44:20.219094"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "02"], ["balance", 781840], ["created_at", "2020-03-16 14:44:20.221955"], ["updated_at", "2020-03-16 14:44:20.221955"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Create (0.2ms)[0m  [1m[32mINSERT INTO "accounts" ("account_id", "balance", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["account_id", "03"], ["balance", 193068], ["created_at", "2020-03-16 14:44:20.232115"], ["updated_at", "2020-03-16 14:44:20.232115"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/transaction/produce" for ::1 at 2020-03-16 23:43:48 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProducerController#start as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 519)
+
+
+  
+NoMethodError (undefined method `start' for #<RandomTransactionService:0x00007f90960cf2a0>):
+  
+app/controllers/producer_controller.rb:7:in `start'
+Started POST "/transaction/produce" for ::1 at 2020-03-16 23:45:55 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 486)
+
+
+  
+NoMethodError (undefined method `start' for #<RandomTransactionService:0x00007f90a66988e8>):
+  
+app/controllers/producer_controller.rb:7:in `start'
+Started POST "/transaction/produce" for ::1 at 2020-03-16 23:46:32 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 69)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 533681], ["updated_at", "2020-03-16 15:46:32.751526"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (5156.2ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 168681], ["updated_at", "2020-03-16 15:46:32.753127"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 703293], ["updated_at", "2020-03-16 15:46:32.752614"], ["id", 5]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 514692], ["updated_at", "2020-03-16 15:46:39.923199"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 711964], ["updated_at", "2020-03-16 15:46:50.925215"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 532747], ["updated_at", "2020-03-16 15:46:59.932101"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 764868], ["updated_at", "2020-03-16 15:47:17.934206"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:26:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 521084], ["updated_at", "2020-03-16 15:47:23.938173"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:40:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-16 23:47:41 +0800
+Processing by ProducerController#stop as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started POST "/transaction/start" for ::1 at 2020-03-16 23:58:19 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/transaction/start"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/transaction/produce" for ::1 at 2020-03-16 23:58:42 +0800
+Processing by ProducerController#start as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 67)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 575674], ["updated_at", "2020-03-16 15:58:42.868518"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.2ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 290596], ["updated_at", "2020-03-16 15:58:42.870717"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Update (5144.6ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 844590], ["updated_at", "2020-03-16 15:58:42.871504"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 563981], ["updated_at", "2020-03-16 15:59:06.025023"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 521026], ["updated_at", "2020-03-16 15:59:08.034341"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:31:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 326639], ["updated_at", "2020-03-16 15:59:10.025415"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:46:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-16 23:59:18 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:21:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1068)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-17 00:46:25 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- faraday):
+  
+app/service/consumer_service.rb:1:in `<main>'
+app/service/random_transaction_service.rb:9:in `initialize'
+app/controllers/producer_controller.rb:3:in `initialize'
+Started POST "/transaction/produce" for ::1 at 2020-03-17 00:47:00 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 98)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-17 00:48:03 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 961)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-17 00:59:27 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-17 00:59:53 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stopTransaction'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 4330)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-17 01:00:27 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 94)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-17 01:01:21 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 953)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-17 01:01:43 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-17 01:02:12 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 953)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-17 01:02:25 +0800
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-17 01:02:30 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1115)
+
+
+Started POST "/transaction/stop" for ::1 at 2020-03-18 21:52:52 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:23:in `stopTransaction'
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 4599)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-18 21:53:03 +0800
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 75)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-18 21:56:07 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:23:in `stopTransaction'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 4377)
+
+
+Started POST "/transaction/stop" for ::1 at 2020-03-18 21:56:12 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:23:in `stopTransaction'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 752)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-18 21:56:19 +0800
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAccount Load (1.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 759639], ["updated_at", "2020-03-18 13:56:19.955688"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 337036], ["updated_at", "2020-03-18 13:56:19.963562"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 491318], ["updated_at", "2020-03-18 13:56:19.969226"], ["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 434219], ["updated_at", "2020-03-18 13:56:23.003609"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 495469], ["updated_at", "2020-03-18 13:56:36.019380"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 394285], ["updated_at", "2020-03-18 13:56:37.001429"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 847151], ["updated_at", "2020-03-18 13:56:50.970276"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 562299], ["updated_at", "2020-03-18 13:56:58.030599"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 476751], ["updated_at", "2020-03-18 13:57:03.014753"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 442117], ["updated_at", "2020-03-18 13:57:04.022574"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-18 21:57:04 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:23:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1369)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-18 21:57:38 +0800
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 623637], ["updated_at", "2020-03-18 13:57:38.566888"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 830340], ["updated_at", "2020-03-18 13:57:38.576335"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.2ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 461522], ["updated_at", "2020-03-18 13:57:38.579386"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 537894], ["updated_at", "2020-03-18 13:57:44.587039"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 614064], ["updated_at", "2020-03-18 13:58:02.583915"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 897064], ["updated_at", "2020-03-18 13:58:04.587089"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 443752], ["updated_at", "2020-03-18 13:58:14.596297"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 524339], ["updated_at", "2020-03-18 13:58:15.593263"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 905994], ["updated_at", "2020-03-18 13:58:21.596365"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 445260], ["updated_at", "2020-03-18 13:58:25.602381"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 498922], ["updated_at", "2020-03-18 13:58:33.605576"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 376799], ["updated_at", "2020-03-18 13:58:36.611308"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 871112], ["updated_at", "2020-03-18 13:58:42.607651"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (1.1ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 859413], ["updated_at", "2020-03-18 13:58:49.624237"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 319622], ["updated_at", "2020-03-18 13:58:52.623646"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 480651], ["updated_at", "2020-03-18 13:58:56.617072"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.8ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 578759], ["updated_at", "2020-03-18 13:59:08.634917"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 277755], ["updated_at", "2020-03-18 13:59:08.643128"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 795166], ["updated_at", "2020-03-18 13:59:14.646003"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 206764], ["updated_at", "2020-03-18 13:59:19.658591"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 823355], ["updated_at", "2020-03-18 13:59:21.654991"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 160524], ["updated_at", "2020-03-18 13:59:28.671348"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 608469], ["updated_at", "2020-03-18 13:59:29.655072"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 76798], ["updated_at", "2020-03-18 13:59:29.684334"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 512976], ["updated_at", "2020-03-18 13:59:39.664551"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 772223], ["updated_at", "2020-03-18 13:59:40.666939"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 838473], ["updated_at", "2020-03-18 13:59:55.680193"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 805960], ["updated_at", "2020-03-18 14:00:00.689270"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 8214], ["updated_at", "2020-03-18 14:00:03.696767"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 511745], ["updated_at", "2020-03-18 14:00:08.678409"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 864047], ["updated_at", "2020-03-18 14:00:31.702845"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 74384], ["updated_at", "2020-03-18 14:00:31.706558"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 871834], ["updated_at", "2020-03-18 14:00:34.712174"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.4ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 590434], ["updated_at", "2020-03-18 14:00:38.687645"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 931937], ["updated_at", "2020-03-18 14:00:50.726578"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 995395], ["updated_at", "2020-03-18 14:00:52.736666"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-18 22:00:55 +0800
+  [1m[36mAccount Load (140338.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  [1m[36mAccount Load (137309.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  [1m[36mAccount Load (128359.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+Started POST "/transaction/produce" for ::1 at 2020-03-18 22:03:48 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 148)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 85370], ["updated_at", "2020-03-18 14:03:48.715692"], ["id", 6]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAccount Update (0.2ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 689503], ["updated_at", "2020-03-18 14:03:48.717857"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAccount Update (0.2ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 967943], ["updated_at", "2020-03-18 14:03:48.721594"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 986339], ["updated_at", "2020-03-18 14:03:52.733213"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 914874], ["updated_at", "2020-03-18 14:03:55.746038"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 607116], ["updated_at", "2020-03-18 14:03:57.733387"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 673584], ["updated_at", "2020-03-18 14:04:05.745562"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 719082], ["updated_at", "2020-03-18 14:04:12.757134"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 164908], ["updated_at", "2020-03-18 14:04:18.730434"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:34:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 975643], ["updated_at", "2020-03-18 14:04:21.757071"], ["id", 5]]
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:52:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-18 22:04:24 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:23:in `stopTransaction'
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1386)
+
+
+Started POST "/transaction/produce" for ::1 at 2020-03-18 23:24:01 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant RandomTransactionService::ConsumerService):
+  
+app/service/random_transaction_service.rb:9:in `initialize'
+app/controllers/producer_controller.rb:3:in `initialize'
+Started POST "/transaction/produce" for ::1 at 2020-03-18 23:25:01 +0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProducerController#start as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 96)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "02"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.7ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 653281], ["updated_at", "2020-03-18 15:25:01.655454"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (5158.9ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 995104], ["updated_at", "2020-03-18 15:25:01.657901"], ["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 249950], ["updated_at", "2020-03-18 15:25:06.856285"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 561782], ["updated_at", "2020-03-18 15:25:17.862040"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 584675], ["updated_at", "2020-03-18 15:25:19.875655"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 612227], ["updated_at", "2020-03-18 15:25:20.886070"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 305955], ["updated_at", "2020-03-18 15:25:23.870473"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "03"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 402152], ["updated_at", "2020-03-18 15:25:26.883494"], ["id", 6]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."account_id" = ? LIMIT ?[0m  [["account_id", "01"], ["LIMIT", 1]]
+  ↳ app/service/random_transaction_service.rb:33:in `block in process_random_transaction'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[36mAccount Update (0.3ms)[0m  [1m[33mUPDATE "accounts" SET "balance" = ?, "updated_at" = ? WHERE "accounts"."id" = ?[0m  [["balance", 570271], ["updated_at", "2020-03-18 15:25:29.899296"], ["id", 4]]
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/service/random_transaction_service.rb:50:in `block in process_random_transaction'
+Started POST "/transaction/stop" for ::1 at 2020-03-18 23:25:34 +0800
+Processing by ProducerController#stop as */*
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/service/random_transaction_service.rb:22:in `stop'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1329)
+
+
