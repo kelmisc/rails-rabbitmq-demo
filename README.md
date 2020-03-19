@@ -2,6 +2,8 @@
 
 this demo uses rabbitmq as a message queue.
 
+to ensure you have ruby gems required by the applications, please run bundle install in both consumer and producer app.
+
 procedure to start the whole demo:
 1. execute "docker-compose up" at project root path to start message queue.
 2. cd ./producer and execute "rails db:reset && rails s" to 
