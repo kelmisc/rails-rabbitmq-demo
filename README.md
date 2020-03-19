@@ -17,3 +17,5 @@ by the message queue and be displayed in the console.
 
 To stop the services, post to localhost:4000/transaction/stop and localhost:3000/consume/stop
 press ctrl-c on all the consoles where the "rails server" and "docker-compose" up ran at.
+
+transaction logs and latest account information will be returned as json upon the call on localhost:4000/transaction/stop
